@@ -1,0 +1,13 @@
+def performbubblesort(nums):
+    n = len(nums)
+    fixthisposition = n-1
+    while fixthisposition > 0:
+        for index in range(0,fixthisposition):
+            if nums[index] > nums[index+1]:
+                nums[index],nums[index+1] = nums[index+1],nums[index]
+        fixthisposition -= 1
+
+nums = [3,1,5,7,2,9,6]
+print(nums)
+performbubblesort(nums)
+print(nums)
