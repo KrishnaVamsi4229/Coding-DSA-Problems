@@ -1,0 +1,17 @@
+def performinsertionsort(nums):
+    n = len(nums)
+    for index in range(1,n):
+        temp = nums[index]
+        previous = index-1
+        while previous >= 0:
+            if nums[previous] > temp:
+                nums[previous+1] = nums[previous]
+            else:
+                break
+            previous -= 1
+        nums[previous+1] = temp
+
+nums = [3,1,5,7,2,9,6]
+print(nums)
+performinsertionsort(nums)
+print(nums)
